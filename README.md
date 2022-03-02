@@ -20,11 +20,11 @@
   - [pyserialはこちらのサイトにアクセス](https://pypi.org/project/pyserial/)
 
 # How to
-1. git clone
-2. 研究室のArduino、慣性センサ、USBビデオをPCに接続
-3. configファイル内の設定に問題がないか確認
+1. git clone https://github.com/shinji1095/Shinji_SP.git
+2. 研究室のArduino、慣性センサ、USBカメラをPCに接続
+3. config.pyファイル内の設定に問題がないか確認
 4. Requirementをインストール済みであることを確認
-5. プログラムに問題がなければ実行
+5. python Shinji_SP.py
 
 
 # Trouble
