@@ -48,6 +48,8 @@ class Functions:
         # ---------------無線機の設定--------------------------------
         try:
             self.comport = serial.Serial(PORT_NAME, baudrate=BAUD_RATE, parity=serial.PARITY_NONE)
+            self.comport = serial.Serial(PORT_NAME, baudrate=BAUD_RATE, parity=serial.PARITY_NONE)
+            self.comport = serial.Serial(PORT_NAME, baudrate=BAUD_RATE, parity=serial.PARITY_NONE)
         except serial.SerialException:
             print(f"{PORT_NAME}が開いていません\n接続を確認してください")
 
@@ -98,6 +100,8 @@ class Functions:
 
     def KODAMA_prepare(self):
         # ---------------無線機の計測準備--------------------------------
+        self.comport.write(self.prepare_command)
+        self.comport.write(self.prepare_command)
         self.comport.write(self.prepare_command)
 
         # ---------------Motiveの準備(LEDの点灯)--------------------------------
@@ -173,6 +177,8 @@ class Functions:
 
     def KODAMA_stop(self):
           # ---------------無線機の計測終了--------------------------------
+        self.comport.write(self.stop_command)
+        self.comport.write(self.stop_command)
         self.comport.write(self.stop_command)
         self.arduino_comport.write("1".encode())
 
